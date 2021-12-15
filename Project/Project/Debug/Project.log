@@ -1,2 +1,6 @@
 ﻿  Project.cpp
+C:\Users\jdoro\C++\Project\Project\Project\Project.cpp(14,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\jdoro\C++\Project\Project\Project\Project.cpp(23,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\jdoro\C++\Project\Project\Project\Project.cpp(43,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\jdoro\C++\Project\Project\Project\Project.cpp(52,21): warning C4018: <: несоответствие типов со знаком и без знака
   Project.vcxproj -> C:\Users\jdoro\C++\Project\Project\Debug\Project.exe

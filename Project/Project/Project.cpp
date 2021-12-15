@@ -6,12 +6,26 @@ int main() {
 	int choice = 0;
 	cout << "1) Login \n2) Registration" << endl;
 	cin >> choice;
+	cin.ignore(256, '\n');
 	if (choice == 2) {
 		string username = "", password = "";
 		cout << "Please, enter a username(It can't have spaces):" << endl;
-		cin >> username;
+		getline(cin, username);
+		for (int i = 0; i < username.length(); i++) {
+			if (username[i] == ' ') {
+				cout << "Your username has spaces, so try to log in again" << endl;
+				username = "";
+				main();
+			}
+		}
 		cout << endl << "Please, enter a password (It can't have spaces, also try to use signs, letters and numbers to make your password safe enough):" << endl;
-		cin >> password;
+		getline (cin, password);
+		for (int i = 0; i < password.length(); i++) {
+			if (password[i] == ' ') {
+				cout << "Your password has spaces, so try to log in again" << endl;
+				main();
+			}
+		}
 
 		ofstream logsFile;
 		logsFile.open(username + ".txt");
@@ -25,9 +39,22 @@ int main() {
 		ifstream Fin;
 		string username1 = "", password1 = "";
 		cout << "Please, enter your username:" << endl;
-		cin >> username1;
+		getline(cin, username1);
+		for (int i = 0; i < username1.length(); i++) {
+			if (username1[i] == ' ') {
+				cout << "Your username has spaces, so try to registrate again" << endl;
+				username1 = "";
+				main();
+			}
+		}
 		cout << endl << "Please, enter your password:" << endl;
-		cin >> password1;
+		getline(cin, password1);
+		for (int i = 0; i < password1.length(); i++) {
+			if (password1[i] == ' ') {
+				cout << "Your password has spaces, so try to registrate again" << endl;
+				main();
+			}
+		}
 		Fin.open(username1 + ".txt");
 		if (!Fin.is_open()) {
 			cout << endl << "There are no any accounts with such name, come back to the menu?" << endl << "1) Yes" << endl << "2) No" << endl;
